@@ -1,5 +1,6 @@
 import classnames from 'classnames';
 import { FC } from 'react';
+import { IoLogoGithub, IoPencilSharp } from 'react-icons/io5';
 import useLocalStorage from 'react-use-localstorage';
 import { LS_KEY_SELECTED_LANGUAGE } from '../types/constants';
 import { Language } from '../types/enums';
@@ -40,16 +41,21 @@ export const Header: FC<HeaderProps> = ({ className }) => {
 
       {/* right section */}
       <div className='col-span-1 flex justify-end items-center'>
-        <p className='text-xs font-medium uppercase flex-none mr-6 text-gray-300 hover:text-lime-300'>
-          <a href='https://github.com/thatisuday/fast-language' target='_blank' rel='noreferrer'>
-            Github
-          </a>
-        </p>
-        <p className='text-xs font-medium uppercase flex-none text-gray-300 hover:text-lime-300'>
-          <a href='https://github.com/thatisuday/fast-language-translations/issues' target='_blank' rel='noreferrer'>
-            Add a translation
-          </a>
-        </p>
+        <a href='https://github.com/thatisuday/fast-language' target='_blank' rel='noreferrer'>
+          <div className='flex items-center mr-6'>
+            <IoLogoGithub className='w-5 mr-1 text-gray-300' />
+            <p className='text-xs font-medium uppercase flex-none text-gray-300 hover:text-lime-300'>Github</p>
+          </div>
+        </a>
+
+        <a href='https://github.com/thatisuday/fast-language-translations/issues' target='_blank' rel='noreferrer'>
+          <div className='flex items-center'>
+            <IoPencilSharp className='w-5 mr-1 text-gray-300' />
+            <p className='text-xs font-medium uppercase flex-none text-gray-300 hover:text-lime-300'>
+              Add a translation
+            </p>
+          </div>
+        </a>
       </div>
     </div>
   );
