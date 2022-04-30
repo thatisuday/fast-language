@@ -1,0 +1,8 @@
+
+# generated files
+.gitignore
+public
+
+# config files
+tailwind.config.js
+worker.webpack.config.js
