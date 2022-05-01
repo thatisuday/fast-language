@@ -4,7 +4,7 @@
   <h1>Fast Language Extension</h1>
   <p>A Chrome extension to learn languages faster whenever you open a new tab.</p>
 
-  <img width="100%" src="./public/screenshot.png" alt="logo" />
+  <img width="100%" src="./public/preview.png" alt="logo" />
   <p>Whenever you open a new tab, you will get an opportunity to learn a new word with a simple example. </p>
 
   <!-- supported languages -->
