@@ -1,6 +1,7 @@
 import classnames from 'classnames';
 import { FC } from 'react';
-import { IoLogoGithub, IoPencilSharp } from 'react-icons/io5';
+import { MdTranslate } from 'react-icons/md';
+import { VscGithub } from 'react-icons/vsc';
 import useLocalStorage from 'react-use-localstorage';
 import { LS_KEY_SELECTED_LANGUAGE } from '../types/constants';
 import { Language } from '../types/enums';
@@ -22,7 +23,7 @@ export const Header: FC<HeaderProps> = ({ className }) => {
   return (
     <div className={componentClassName}>
       {/* left section */}
-      <div className='col-span-1 flex items-center'>
+      <div className='col-span-1 flex items-center cursor-not-allowed'>
         <p className='text-xs font-medium uppercase flex-none text-gray-300'>Selected language</p>
         <img
           src={`/flags/${selectedLanguage}.svg`}
@@ -34,7 +35,7 @@ export const Header: FC<HeaderProps> = ({ className }) => {
 
       {/* middle section */}
       <div className='col-span-1 flex justify-center items-center'>
-        <p className='text-2xl font-black uppercase text-center text-gray-100 hover:text-lime-300 transition-all duration-300'>
+        <p className='text-2xl font-black uppercase text-center header-text-animation transition-all duration-300 linear-wipe'>
           Fast Language
         </p>
       </div>
@@ -42,15 +43,15 @@ export const Header: FC<HeaderProps> = ({ className }) => {
       {/* right section */}
       <div className='col-span-1 flex justify-end items-center'>
         <a href='https://github.com/thatisuday/fast-language' target='_blank' rel='noreferrer'>
-          <div className='flex items-center mr-6'>
-            <IoLogoGithub className='w-5 mr-1 text-gray-300' />
+          <div className='flex items-center mr-8'>
+            <VscGithub className='text-xl mr-2 text-gray-300' />
             <p className='text-xs font-medium uppercase flex-none text-gray-300 hover:text-lime-300'>Github</p>
           </div>
         </a>
 
-        <a href='https://github.com/thatisuday/fast-language-translations/issues' target='_blank' rel='noreferrer'>
+        <a href='https://github.com/thatisuday/fast-language-translations' target='_blank' rel='noreferrer'>
           <div className='flex items-center'>
-            <IoPencilSharp className='w-5 mr-1 text-gray-300' />
+            <MdTranslate className='text-xl mr-2 text-gray-300' />
             <p className='text-xs font-medium uppercase flex-none text-gray-300 hover:text-lime-300'>
               Add a translation
             </p>
